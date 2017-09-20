@@ -9,5 +9,6 @@
     <string name="txtEmailAddress_hint">Email Address</string>
     <string name="txtpassword_hint">Password</string>
     <string name="phone_hint">Phone Number</string>
+    <string name="logo_hint" size= "20dp">EvApp</string>
 
 </resources>

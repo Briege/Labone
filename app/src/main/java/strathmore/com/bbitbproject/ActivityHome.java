@@ -1,11 +1,13 @@
 package strathmore.com.bbitbproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class ActivityHome extends AppCompatActivity {
 
@@ -16,15 +18,31 @@ public class ActivityHome extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /**FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });**/
 
-    }
+
+        TextView Firstname = (TextView) findViewById(R.id.textView);
+        TextView Lastname = (TextView) findViewById(R.id.textView2);
+        TextView Username = (TextView) findViewById(R.id.textView3);
+        TextView EmailAddress = (TextView) findViewById(R.id.textView4);
+        TextView PhoneNumber = (TextView) findViewById(R.id.textView5);
+        TextView Password = (TextView) findViewById(R.id.textView6);
+
+        Intent intent = getIntent();
+        String TextView_Firstname = intent.getStringExtra("Firstname");
+        String TextView_Lastname = intent.getStringExtra("Lastname");
+        String TextView_Username = intent.getStringExtra("Username");
+        String TextView_EmailAddress = intent.getStringExtra("EmailAddress");
+        String TextView_PhoneNumber = intent.getStringExtra("Phone");
+        String TextView_Password = intent.getStringExtra("Password");
+
+        Firstname.setText(TextView_Firstname);
+        Lastname.setText(TextView_Lastname);
+        Username.setText(TextView_Username);
+        EmailAddress.setText(TextView_EmailAddress);
+        PhoneNumber.setText(TextView_PhoneNumber);
+        Password.setText(TextView_Password);
+
+
+        }
 
 }
