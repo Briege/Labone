@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.TextInputEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/txtusername_hint"
+        android:id="@+id/username"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="47dp" />
+
+    <android.support.design.widget.TextInputEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/txtpassword_hint"
+        android:id="@+id/password"
+        android:layout_above="@+id/login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Log In"
+        android:id="@+id/login"
+        android:layout_alignBottom="@+id/signup"
+        android:layout_alignLeft="@+id/signup"
+        android:layout_alignStart="@+id/signup"
+        android:layout_marginBottom="79dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:id="@+id/signup"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="176dp" />
+
+</RelativeLayout>
