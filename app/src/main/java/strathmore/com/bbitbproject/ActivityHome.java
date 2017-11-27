@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ActivityHome extends AppCompatActivity {
@@ -34,6 +37,7 @@ public class ActivityHome extends AppCompatActivity {
         String TextView_EmailAddress = intent.getStringExtra("EmailAddress");
         String TextView_PhoneNumber = intent.getStringExtra("Phone");
         String TextView_Password = intent.getStringExtra("Password");
+        
 
         Firstname.setText(TextView_Firstname);
         Lastname.setText(TextView_Lastname);
@@ -43,6 +47,20 @@ public class ActivityHome extends AppCompatActivity {
         Password.setText(TextView_Password);
 
 
+
+        Button BtnViewmap = (Button) findViewById(R.id.map);
+        BtnViewmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signupintent = new Intent(ActivityHome.this, MapsActivity.class);
+                startActivity(signupintent);
+            }
+        });
+
+
+
         }
 
 }
+
+
